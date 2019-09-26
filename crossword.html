@@ -1,0 +1,128 @@
+<html !doctype>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício - Palavras Cruzadas</title>
+    <link href="crossword.css" rel="stylesheet" type="text/css">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="crossword.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <p><strong>Exercício - Palavras cruzadas</strong><p>
+
+      <p> Você é bom/boa em palavras cruzadas?</p>
+      <p>Clique nos números para visualizar a pergunta e em seguida digite a resposta para completar a palavra cruzada. Não use acentos nas palavras se forem acentuadas, nem coloque espaço entre elas.</p>
+
+
+
+      <div id="divTest"></div>
+
+
+   <!--    <div id="dicas" style="margin-top:30px;">
+        <div class="aux">
+          <div>
+            <button type="button" id="target1" style="margin-right:20px;">Dica questão 1</button> <div id="dica1"></div>
+          </div>
+          <div>
+            <button type="button" id="target2">Dica questão 2</button> <div id="dica2"></div>
+          </div>
+        </div>
+
+        <div class="aux">
+          <div>
+            <button type="button" id="target1" style="margin-right:20px;">Dica questão 1</button> <div id="dica1"></div>
+          </div>
+          <div>
+            <button type="button" id="target2">Dica questão 2</button> <div id="dica2"></div>
+          </div>
+        </div>
+
+
+      </div> -->
+
+
+
+
+      <script>
+
+        var str1 = 'Longitudinalidade';
+        var res1 = [];
+        var cont1 = 0;
+
+        $('#target1').click(function() {
+            $('#dica1').append(function(value) {
+              return res1[cont1] = str1.charAt(cont1);
+            });
+            cont1++;
+        });
+
+        var str2 = 'Familia';
+        var res2 = [];
+        var cont2 = 0;
+
+        $('#target2').click(function() {
+            $('#dica2').append(function(value) {
+              return res2[cont2] = str2.charAt(cont2);
+            });
+            cont2++;
+        });
+
+
+        var str3 = 'Responsabilidade';
+        var res3 = [];
+        var cont3 = 0;
+
+        $('#target3').click(function() {
+            $('#dica3').append(function(value) {
+              return res3[cont3] = str3.charAt(cont3);
+            });
+            cont3++;
+        });
+
+
+ // letras - grid// 
+
+          $(function () {
+              var grid = ['@@@@@@@@@@@ @@@@@@@@@@@@', 
+                          '@@@@@@@@@@@ @@@@@@@@@@@@',
+                          '@@@@@@@@@@@ @@@@@@@@@ @@',
+                          '@@@@@@@@@@@ @@@@@@@@@ @@',
+                          '@@@@@@@@@@@ @@@@@@@@@ @@',
+                          '@@@@@@@@@@@ @@@@@@@@@ @@',
+                          '@@@@@@@@@@@ @@@@@@@@@ @@',
+                          '@@@@@@@@@@@ @@@@@@@@@ @@',
+                          '@@@@@@@@@               ',/* pressao arterial */
+                          '@@@@@@@@@@@ @@@@@@@@@ @@', 
+                          '@@@         @@@@@@@@@@@@',
+                          '@@@@@@@@@@@ @@@@@@@@@@@@',
+                          '@@@@@@@@@@@ @@@@@@@@@@@@',
+                          '@@@@@@@@@@        @@@@@@',
+                          '@@@@@@@@@@@ @@@@@@@@@@@@',
+                          '@@@@@@@@@@@ @@@@@@@@@@@@',
+                          '@@@@@@@@@@@ @@@@@@@@@@@@'
+
+                        ];
+                          var acrossClues = ['PRINCIPAL PARÂMETRO DE MONITORIZAÇÃO DO NIFEDIPINO.%%pressaoarterial', /* HORIZONTAL- 1 */
+                          'ANTI-HIPERTENSIVO DE ESCOLHA NA GESTAÇÃO.%%metildopa', 'ANTIMICROBIANO INCOMPATÍVEL COM O SULFATO DE MAGNÉSIO.%%cefepime'
+                                                        
+                        ];
+
+                        // vertical //
+
+                        //dando erro no resultado // 
+
+                        var downClues = [ 'MEDICAMENTO DE ESCOLHA PARA TRATAR AS CONVULSÕES DA ECLÂMPSIA.%%sulfatodemagnesio', /* VERTICAL 1 */
+                        'É PREFERÍVEL QUE A HIDROCLOROTIAZIDA SEJA ADMINISTRADA PELA MANHÃ POIS OCASIONA .%%nocturia',
+                      
+                      ];
+
+              $('#divTest').crossword({ gridMask: grid,
+                              acrossClues: acrossClues,
+                              downClues: downClues,
+                              cluesToRight: true,
+                              validateAnswer: 'clue' });
+          });
+      </script>
+    </div>
+  </body>
+</html>

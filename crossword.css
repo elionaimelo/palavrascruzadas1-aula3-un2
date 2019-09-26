@@ -1,0 +1,112 @@
+p {
+  color: black;
+  margin-top: 20px;
+  line-height: 22px;
+}
+.container {
+  margin: auto;
+  width: 960px;
+}
+
+.txt-center {
+  text-align: center;
+
+}
+
+.pic-center {
+  margin: auto;
+  display: block;
+}
+
+
+#cwd-container {
+  color: black;
+  margin: auto;
+}
+
+#cwd-grid {
+    border: solid 1px black;
+}
+
+#cwd-grid td.cwd-tile-highlight
+{
+    background-color: Yellow !important;
+}
+
+#cwd-grid td.cwd-tile-cursor
+{
+    border-color: black !important;
+    background-color: darkgray !important;
+    color: black;
+}
+
+#cwd-grid td.cwd-tile-correct
+{
+    background-color: Lime !important;
+}
+
+#cwd-grid td.cwd-tile-incorrect
+{
+    border-color: Red !important;
+}
+
+.cwd-tile {
+    width: 35px;
+    height: 35px;
+    border: solid 1px black;
+    padding: 0;
+    vertical-align: top;
+}
+
+.cwd-tile-letter {
+    text-align: center;
+    font-size: 16px;
+}
+
+#cwd-clue-box {
+    padding: 5px;
+    margin-top: 5px;
+    border: solid 1px black;
+    font-size: 105%;
+    font-weight: bold;
+    height: 50px;
+}
+
+.cwd-clue-highlight
+{
+    font-weight: bold;
+}
+
+.cwd-clues-header {
+    font-size: 105%;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.cwd-clue div {
+    display: table-cell;
+}
+
+.cwd-clue-no {
+    width: 25px;
+}
+
+.cwd-clue-text {
+    cursor: pointer;
+}
+
+.cwd-tile-inactive {
+
+}
+
+
+.aux {
+  margin-top: 30px;
+  margin-right: 20px;
+  float: left;
+}
+
+.aux button {
+  margin-top: 30px;
+}
